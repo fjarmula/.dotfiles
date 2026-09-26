@@ -1,20 +1,27 @@
 # =========================
+
 # Ghostty
+
 # =========================
 
 # Theme
+
 theme = Catppuccin Mocha
 
 # Window
-title = "Ghostty"
+
+title = "👻 Ghostty"
 window-width = 105
 window-height = 32
 
 # Prevent shell/programs from changing window title/cursor
+
 shell-integration-features = no-title,no-cursor
 
 # =========================
+
 # Font
+
 # =========================
 
 font-family = "JetBrainsMono Nerd Font Mono"
@@ -22,21 +29,27 @@ font-style = "Bold"
 font-size = 14
 
 # =========================
+
 # Cursor
+
 # =========================
 
 cursor-style = block
 cursor-style-blink = false
 
 # =========================
+
 # Appearance
+
 # =========================
 
 background-opacity = 0.95
 background-blur-radius = 20
 
 # =========================
+
 # macOS
+
 # =========================
 
 macos-titlebar-style = native
@@ -44,17 +57,23 @@ macos-titlebar-proxy-icon = hidden
 macos-window-buttons = visible
 
 # =========================
+
 # Bell
+
 # =========================
 
 bell-features = no-title,no-system,no-audio,no-attention,no-border
 
 # =========================
+
 # Keybindings
+
 # =========================
 
 # Autocomplete
+
 keybind = cmd+shift+period=text:\x06
 
 # fzf history search (Ctrl-R)
+
 keybind = cmd+r=text:\x12
