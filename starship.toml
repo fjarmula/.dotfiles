@@ -5,14 +5,14 @@ add_newline = false
 format = """
 $os\
 $username\
-[](bg:215 fg:red)\
+[\uE0B0](bg:215 fg:red)\
 $directory\
-[](bg:yellow fg:215)\
+[\uE0B0](bg:yellow fg:215)\
 $git_branch\
 $git_status\
-[](bg:blue fg:yellow)\
+[\uE0B0](bg:blue fg:yellow)\
 $python\
-[](fg:blue)\
+[\uE0B4](fg:blue)\
 $character"""
 
 # =========================
@@ -25,7 +25,7 @@ style = "bg:red fg:0"
 format = "[ $symbol]($style)"
 
 [os.symbols]
-Macos = "󰀵 "
+Macos = "\U000F0035 "
 
 # =========================
 # Username
@@ -45,14 +45,14 @@ format = "[$user ]($style)"
 style = "bg:215 fg:0 bold"
 format = "[ $path ]($style)"
 truncation_length = 3
-truncation_symbol = "…/"
+truncation_symbol = "\u2026/"
 
 # =========================
 # Git
 # =========================
 
 [git_branch]
-symbol = " "
+symbol = "\uF418 "
 style = "bg:yellow fg:0 bold"
 format = "[ $symbol$branch]($style)"
 
