@@ -5,7 +5,6 @@
 # =========================
 
 # Theme
-
 theme = Catppuccin Mocha
 
 # Window
@@ -43,7 +42,7 @@ cursor-style-blink = false
 
 # =========================
 
-background-opacity = 0.95
+background-opacity = 0.75
 background-blur-radius = 20
 
 # =========================
