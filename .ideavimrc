@@ -1,0 +1,75 @@
+" ============================================================================
+" QUICK CHEAT SHEET 
+"
+" --- NAVIGATION (Movement) ---
+"   h / j / k / l : Left / Down / Up / Right
+"   w / b         : Next word start / Previous word start
+"   0 / $         : Start of line / End of line
+"   gg / G        : Top of file / Bottom of file
+"   Ctrl + d / u  : Scroll half page down / up
+"
+" --- MODES ---
+"   i             : Enter Insert mode (before cursor)
+"   a             : Enter Insert mode (after cursor)
+"   o             : Open new line below & enter Insert mode
+"   Esc or jk     : Exit to Normal mode
+"
+" --- EDITING & DELETING ---
+"   x             : Delete single character
+"   dw            : Delete word
+"   dd            : Delete entire line
+"   u / Ctrl + r  : Undo / Redo
+"   << / >>       : Un-indent / Indent line (Shift+, , / Shift+. .)
+"   Ctrl + d      : Un-indent in Insert mode
+"
+" --- SEARCHING ---
+"   /text         : Search for 'text'
+"   n / N         : Next / Previous search match
+"   <Space> + h   : Clear search highlights
+"
+" --- IDE ACTIONS (PyCharm Integration) ---
+"   <Space> + r   : Reformat code
+"   <Space> + f   : Search Everywhere
+"   <Space> + e   : File Tree toggle
+"   <Space> + b   : Toggle Breakpoint
+"   <Space> + ca  : Code Actions (Option+Enter)
+"   ]g / [g       : Next / Previous error
+"============================================================================
+
+" Enable relative line numbers for fast vertical movement (e.g., 5j, 12k)
+set relativenumber
+
+" Clipboard integration for macOS (share system clipboard with Vim yanks/pastes)
+set clipboard+=unnamedplus,unnamed
+
+" Search settings
+set ignorecase
+set smartcase
+set incsearch
+
+" Set Space as the Leader key
+let mapleader=" "
+
+" Quick escape from Insert mode via 'jk'
+inoremap jk <Esc>
+
+" --- IDEACTION MAPPINGS (via Leader) ---
+
+" Space + r -> Reformat code (PEP 8 / Black)
+nmap <leader>r <Action>(ReformatCode)
+
+" Space + f -> Search Everywhere
+nmap <leader>f <Action>(SearchEverywhere)
+
+" Space + e -> Toggle Project Tool Window (File Tree)
+nmap <leader>e <Action>(ActivateProjectToolWindow)
+
+" Space + b -> Toggle Line Breakpoint
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+
+" Space + ca -> Code Actions / Quick Fix (equivalent to Option+Enter)
+nmap <leader>ca <Action>(ShowIntentionActions)
+
+" Navigate through code errors/warnings (equivalent to F2 / Shift+F2)
+nmap ]g <Action>(GotoNextError)
+nmap [g <Action>(GotoPreviousError)
