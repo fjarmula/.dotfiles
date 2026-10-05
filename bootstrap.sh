@@ -47,7 +47,7 @@ mkdir -p ~/.config/ghostty
 ln -sfn "$DOTFILES_DIR/zshrc" ~/.zshrc
 ln -sfn "$DOTFILES_DIR/starship.toml" ~/.config/starship.toml
 ln -sfn "$DOTFILES_DIR/ghostty-config" ~/.config/ghostty/config
-ln -sfn "$DOTFILES_DIR/.ideavimrc" ~/.ideavimrc
+ln -sfn "$DOTFILES_DIR/ideavimrc" ~/.ideavimrc
 
 # Verification step
 if [ -L ~/.zshrc ] && [ -L ~/.config/starship.toml ] && [ -L ~/.config/ghostty/config ]; then
