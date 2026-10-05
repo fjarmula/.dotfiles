@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-DOTFILES_DIR="$HOME/Documents/Setups/dotfiles"
+DOTFILES_DIR="$HOME/.dotfiles"
 REPO_URL="https://github.com/fjarmula/dotfiles.git"
 
 echo "Starting environment deployment..."

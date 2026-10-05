@@ -17,20 +17,25 @@ curl -fsSL https://raw.githubusercontent.com/fjarmula/dotfiles/main/bootstrap.sh
 Clone the repository locally, grant execution permissions, and run the bootstrap script:
 
 ### 1. Clone the repository
+
 ```bash
-git clone https://github.com/fjarmula/dotfiles.git ~/Documents/Setups/dotfiles
+git clone https://github.com/fjarmula/dotfiles.git ~/.dotfiles
 ```
+
 ### 2. Navigate into the directory
+
 ```bash
-cd ~/Documents/Setups/dotfiles
+cd ~/.dotfiles
 ```
 
 ### 3. Make the bootstrap script executable
+
 ```bash
 chmod +x bootstrap.sh
 ```
 
 ### 4. Run the setup
+
 ```bash
 ./bootstrap.sh
 ```
