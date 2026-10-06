@@ -21,7 +21,8 @@ brew install \
     zsh-autosuggestions \
     zsh-syntax-highlighting \
     zsh-autocomplete \
-    fzf
+    fzf \
+    ripgrep
 
 brew install --cask \
     ghostty \
