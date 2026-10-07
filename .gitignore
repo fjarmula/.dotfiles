@@ -1,0 +1,23 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSSharedFileList
+Icon?
+
+# JetBrains / PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+
+# Backup and temp files
+*.swp
+*.swo
+*~
+*.tmp
+
+# Brewfile lock
+Brewfile.lock.json
