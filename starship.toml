@@ -13,7 +13,7 @@ $git_status\
 [\uE0B0](bg:blue fg:yellow)\
 $python\
 [\uE0B4](fg:blue)\
-$character"""
+\n$character"""
 
 # =========================
 # OS
@@ -76,6 +76,7 @@ format = "[ $virtualenv ]($style)"
 
 [character]
 disabled = false
-success_symbol = ""
-error_symbol = ""
-vimcmd_symbol = ""
+success_symbol = "[\u276F](bold green)"
+error_symbol = "[\u276F](bold red)"
+vimcmd_symbol = "[\u276E](bold yellow)"
+
