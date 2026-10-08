@@ -1,16 +1,13 @@
-tap "heroku/brew"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# YAML Parser
-brew "libyaml"
-# Microsoft Azure CLI 2.0
-brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cross-platform make
@@ -19,12 +16,16 @@ brew "cmake"
 brew "coreutils"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
 brew "gcc"
+# TIFF library and utilities
+brew "libtiff"
 # Distributed revision control system
 brew "git"
 # Quickly rewrite git repository history
@@ -33,26 +34,28 @@ brew "git-filter-repo"
 brew "libtool"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# CLI for Heroku
-brew "heroku"
 # Improved top (interactive process viewer)
 brew "htop"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # X.509 and CMS library
 brew "libksba"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
+# YAML Parser
+brew "libyaml"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
 brew "postgresql@18", link: true
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # General-purpose lossless data-compression library
 brew "zlib"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # Real-time type-ahead completion for Zsh
 brew "zsh-autocomplete"
 # Fish-like fast/unobtrusive autosuggestions for zsh
