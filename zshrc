@@ -2,8 +2,8 @@
 # PATH
 # =========================
 
-# Homebrew and applications
-export PATH="/opt/homebrew/bin:/Applications/RubyMine.app/Contents/MacOS:$PATH"
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
 
 # asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
@@ -17,6 +17,7 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # =========================
 
 alias ls='ls -GFh'
+#alias cat='bat'
 
 # macOS BSD ls colors
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
@@ -26,7 +27,18 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad"
 # fzf
 # =========================
 
+# Configure fzf preview using bat with line numbers and syntax highlighting
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview 'bat --style=numbers --color=always --line-range :50 {} 2>/dev/null || cat {}'"
+
 source <(fzf --zsh)
+
+
+# =========================
+# zoxide
+# =========================
+
+# Initialize zoxide (smart cd replacement)
+eval "$(zoxide init zsh)"
 
 
 # =========================

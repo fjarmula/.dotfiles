@@ -22,7 +22,9 @@ brew install \
     zsh-syntax-highlighting \
     zsh-autocomplete \
     fzf \
-    ripgrep
+    ripgrep \
+    bat \
+    zoxide
 
 brew install --cask \
     ghostty \
