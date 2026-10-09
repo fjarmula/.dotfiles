@@ -30,7 +30,7 @@ return {
     build = ":TSUpdate",
     config = function()
       local treesitter = require("nvim-treesitter")
-      local parsers = { "python", "lua", "bash", "json", "yaml", "markdown" }
+      local parsers = { "python", "lua", "bash", "json", "yaml", "markdown", "toml", "regex", "vim", "gitcommit", "git_rebase" }
 
       -- nvim-treesitter's current API manages parsers separately from
       -- highlighting. Missing parsers are installed asynchronously.
