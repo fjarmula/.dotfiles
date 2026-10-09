@@ -26,6 +26,7 @@ fi
 # 3. Install packages and app
 echo "Installing packages and Ghostty..."
 brew install \
+    asdf \
     starship \
     zsh-autosuggestions \
     zsh-syntax-highlighting \
@@ -36,7 +37,9 @@ brew install \
     zoxide \
     fastfetch \
     uv \
-    nvim
+    nvim \
+    node \
+    tree-sitter-cli
 
 brew install --cask \
     ghostty \

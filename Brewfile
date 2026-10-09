@@ -42,6 +42,8 @@ brew "imagemagick"
 brew "libksba"
 # YAML Parser
 brew "libyaml"
+# Incremental parsing library
+brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Package compiler and linker metadata toolkit
@@ -54,6 +56,8 @@ brew "ripgrep"
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Parser generator tool
+brew "tree-sitter-cli"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # General-purpose lossless data-compression library
