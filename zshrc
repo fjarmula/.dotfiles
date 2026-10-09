@@ -1,15 +1,26 @@
 # =========================
-# PATH
+# Environment & Editors
 # =========================
 
-# Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
-# asdf
+# macOS BSD ls colors
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
+
+# =========================
+# PATH Configuration
+# =========================
+
+# Homebrew (Hardcoded path avoids running `brew --prefix` on every shell startup)
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# asdf version manager
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Local binaries
-. "$HOME/.local/bin/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
 
 # =========================
@@ -17,57 +28,44 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # =========================
 
 alias ls='ls -GFh'
-#alias cat='bat'
-
-# macOS BSD ls colors
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
 
 
 # =========================
-# fzf
+# Core Tools Setup
 # =========================
 
-# Configure fzf preview using bat with line numbers and syntax highlighting
+# Starship prompt
+eval "$(starship init zsh)"
+
+# Zoxide (smart cd replacement)
+eval "$(zoxide init zsh)"
+
+# fzf configuration
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview 'bat --style=numbers --color=always --line-range :50 {} 2>/dev/null || cat {}'"
-
 source <(fzf --zsh)
 
 
 # =========================
-# zoxide
+# Zsh Plugins (Optimized)
 # =========================
 
-# Initialize zoxide (smart cd replacement)
-eval "$(zoxide init zsh)"
+HOMEBREW_PREFIX="/opt/homebrew"
 
+# Plugins
+source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-# =========================
-# Zsh plugins
-# =========================
-
-source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
-
-# Ghostty maps Cmd-Shift-. (>) to Ctrl-F. Use it to accept the inline
-# autosuggestion, matching the Copilot acceptance shortcut in Neovim.
+# Ghostty keybinding: Map Cmd-Shift-. (>) -> Ctrl-F to accept inline suggestions
 bindkey '^F' autosuggest-accept
 
-# Syntax highlighting should be loaded after other Zsh plugins
-source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# Syntax highlighting (Must be loaded last)
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 
 # =========================
-# Syntax highlighting colors
+# Syntax Highlighting Colors
 # =========================
 
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f38ba8'
 ZSH_HIGHLIGHT_STYLES[command]='fg=#89b4fa,bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#f5c2e7,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=#89b4fa,bold'
-
-
-# =========================
-# Prompt
-# =========================
-
-eval "$(starship init zsh)"
