@@ -68,8 +68,8 @@
 "   K             : Show hover documentation / type info (LSP)
 "   grn / grr     : Rename symbol / Find references (LSP)
 "   ]g / [g       : Next / Previous diagnostic error/warning
-"   :lsp info      : Show native LSP status and attached clients
-"   :LspInfo       : Alias for the LSP health check
+"   :LspInfo       : Show the native LSP health/status report
+"   :lsp restart   : Restart LSP clients attached to the current buffer
 "   :Mason        : Package manager for LSPs, formatters & linters
 "   :Lazy         : Plugin manager status
 "

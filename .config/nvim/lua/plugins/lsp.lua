@@ -16,8 +16,9 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      -- Neovim 0.12 provides `:lsp info` natively. nvim-lspconfig therefore
-      -- omits its legacy `:LspInfo` alias, so retain it for muscle memory.
+      -- Neovim's built-in `:lsp` command manages clients (enable, disable,
+      -- restart, and stop) but has no `info` subcommand. Keep `:LspInfo` as
+      -- a convenient status command for the native LSP health check.
       if vim.fn.exists(":LspInfo") == 0 then
         vim.api.nvim_create_user_command("LspInfo", function()
           vim.cmd("checkhealth vim.lsp")
