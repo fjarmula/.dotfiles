@@ -4,8 +4,6 @@ brew "asdf"
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Bourne-Again SHell, a UNIX command interpreter
-brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
@@ -46,6 +44,8 @@ brew "libyaml"
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
@@ -64,8 +64,6 @@ brew "uv"
 brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# Real-time type-ahead completion for Zsh
-brew "zsh-autocomplete"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
