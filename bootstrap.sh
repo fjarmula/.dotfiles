@@ -35,7 +35,8 @@ brew install \
     bat \
     zoxide \
     fastfetch \
-    uv
+    uv \
+    nvim
 
 brew install --cask \
     ghostty \
@@ -47,10 +48,12 @@ mkdir -p ~/.config/ghostty
 
 # Usuń domyślne pliki/stare linki, aby uniknąć błędów nadpisywania
 rm -f ~/.zshrc ~/.config/starship.toml ~/.config/ghostty/config ~/.ideavimrc
+rm -rf ~/.config/nvim
 
 ln -sfn "$DOTFILES_DIR/zshrc" ~/.zshrc
 ln -sfn "$DOTFILES_DIR/starship.toml" ~/.config/starship.toml
 ln -sfn "$DOTFILES_DIR/ghostty-config" ~/.config/ghostty/config
 ln -sfn "$DOTFILES_DIR/ideavimrc" ~/.ideavimrc
+ln -sfn "$DOTFILES_DIR/nvim" ~/.config/nvim
 
 echo "Setup completed successfully."
