@@ -2,6 +2,10 @@
 
 Personal environment configurations for **macOS**, managed via **Zsh**, **Starship**, and **Ghostty**.
 
+The repository mirrors the paths under the home directory. For example, Ghostty
+lives at `.config/ghostty/config` and Neovim at `.config/nvim`; the bootstrap
+script symlinks only the configurations managed by this repository.
+
 ---
 
 ## Quick Installation (Automated)
