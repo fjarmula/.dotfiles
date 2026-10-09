@@ -25,7 +25,8 @@ brew install \
     ripgrep \
     bat \
     zoxide \
-    fastfetch
+    fastfetch \
+    uv
 
 brew install --cask \
     ghostty \

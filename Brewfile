@@ -42,6 +42,8 @@ brew "imagemagick"
 brew "libksba"
 # YAML Parser
 brew "libyaml"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
@@ -52,6 +54,8 @@ brew "ripgrep"
 brew "starship"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # General-purpose lossless data-compression library
 brew "zlib"
 # Shell extension to navigate your filesystem faster
