@@ -14,7 +14,16 @@ if ! command -v brew &> /dev/null; then
     eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null || /usr/local/bin/brew shellenv)"
 fi
 
-# 2. Install packages and app
+# 2. Clone or update repository
+if [ ! -d "$DOTFILES_DIR" ]; then
+    echo "Cloning dotfiles repository..."
+    git clone "$REPO_URL" "$DOTFILES_DIR"
+else
+    echo "Updating dotfiles repository..."
+    git -C "$DOTFILES_DIR" pull --rebase origin main
+fi
+
+# 3. Install packages and app
 echo "Installing packages and Ghostty..."
 brew install \
     starship \
@@ -32,18 +41,12 @@ brew install --cask \
     ghostty \
     font-jetbrains-mono-nerd-font
 
-# 3. Clone or update repository
-if [ ! -d "$DOTFILES_DIR" ]; then
-    echo "Cloning dotfiles repository..."
-    git clone "$REPO_URL" "$DOTFILES_DIR"
-else
-    echo "Updating dotfiles repository..."
-    git -C "$DOTFILES_DIR" pull --rebase origin main
-fi
-
 # 4. Link configuration files
 echo "Creating symlinks..."
 mkdir -p ~/.config/ghostty
+
+# Usuń domyślne pliki/stare linki, aby uniknąć błędów nadpisywania
+rm -f ~/.zshrc ~/.config/starship.toml ~/.config/ghostty/config ~/.ideavimrc
 
 ln -sfn "$DOTFILES_DIR/zshrc" ~/.zshrc
 ln -sfn "$DOTFILES_DIR/starship.toml" ~/.config/starship.toml
