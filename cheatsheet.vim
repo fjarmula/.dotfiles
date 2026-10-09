@@ -27,7 +27,8 @@
 "     i / I       : Insert before cursor / at start of line (first non-blank)
 "     a / A       : Append after cursor / at end of line
 "     o / O       : Open line below / above & enter Insert mode
-"     Esc / Ctrl+c / Ctrl+[ : Exit to Normal mode
+"     jk          : Fast escape from Insert mode to Normal mode
+"     Esc / Ctrl+c: Exit to Normal mode
 "   Visual Mode   : For highlighting text regions
 "     v           : Character-wise Visual mode
 "     Shift + v   : Line-wise Visual mode
@@ -40,25 +41,49 @@
 "   dw / db       : Delete word forward / backward
 "   dd            : Delete entire line
 "   yy / y        : Yank (copy) entire line / Yank selected text
-"   p             : Paste after cursor (or paste over highlighted visual selection)
+"   p             : Paste after cursor (uses system clipboard: unnamedplus)
 "   u / Ctrl + r  : Undo / Redo
 "   << / >>       : Un-indent / Indent line
 "   Ctrl + d      : Un-indent in Insert mode
 "
-" --- SEARCHING ---
-"   /text         : Search for 'text'
+" --- SEARCHING & FINDING (Telescope) ---
+"   /text         : Search for 'text' in buffer
 "   n / N         : Next / Previous search match
-"   <Space> + h   : Clear search highlights
+"   <Space> + h   : Clear search highlights (or Esc in Normal mode)
+"   <Space> + f   : Find files in project (Telescope)
+"   <Space> + ff  : Find files in project (Telescope)
+"   <Space> + fg  : Live grep search text in project (Telescope)
+"   <Space> + fb  : Find open buffers (Telescope)
 "
-" --- VIM ARCHITECTURE (Mental Model) ---
+" --- VIM ARCHITECTURE & TERMINAL INTEGRATION ---
 "   Buffer        : File loaded into memory
-"   Window        : Viewport displaying a buffer (multiple windows can show one buffer)
+"   Window        : Viewport displaying a buffer
+"   Cmd + D       : Split Ghostty terminal pane
+"   Cmd + [ / ]   : Switch between Ghostty splits (Neovim / Terminal)
 "
-" --- IDE ACTIONS (PyCharm Integration) ---
-"   <Space> + r   : Reformat code
-"   <Space> + f   : Search Everywhere
-"   <Space> + e   : File Tree toggle
-"   <Space> + b   : Toggle Breakpoint
-"   <Space> + ca  : Code Actions (Option+Enter)
-"   ]g / [g       : Next / Previous error
+" --- NEOVIM SETUP & IDE ACTIONS ---
+"   <Space> + e   : File Tree toggle (Neo-tree)
+"   <Space> + r   : Format code (Conform: Ruff, else Black, else LSP)
+"   <Space> + ca  : Code Actions / Quick Fix (LSP)
+"   K             : Show hover documentation / type info (LSP)
+"   grn / grr     : Rename symbol / Find references (LSP)
+"   ]g / [g       : Next / Previous diagnostic error/warning
+"   :lsp info      : Show native LSP status and attached clients
+"   :LspInfo       : Alias for the LSP health check
+"   :Mason        : Package manager for LSPs, formatters & linters
+"   :Lazy         : Plugin manager status
+"
+" --- AI & COMPLETION (nvim-cmp & Copilot) ---
+"   Tab / S-Tab   : Navigate autocompletion menu
+"   Enter         : Confirm autocompletion item
+"   Cmd + Shift + >: Accept Copilot inline suggestion in Ghostty (sends Ctrl-F)
+"   Ctrl + F       : Accept Copilot inline suggestion in Insert mode
+"   Ctrl + Space   : Open the completion menu
+"   Ctrl + E       : Close the completion menu
+"   Ctrl + B / Alt + F : Scroll completion documentation backward / forward
+"
+" --- GIT INTEGRATION (Gitsigns) ---
+"   Gutter signs  : ▎ (added/changed),  (deleted)
+"   ]h / [h       : Next / Previous Git hunk
+"   <Space> + hp  : Preview Git hunk diff floating window
 "============================================================================
