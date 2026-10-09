@@ -48,6 +48,10 @@ eval "$(zoxide init zsh)"
 source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
+# Ghostty maps Cmd-Shift-. (>) to Ctrl-F. Use it to accept the inline
+# autosuggestion, matching the Copilot acceptance shortcut in Neovim.
+bindkey '^F' autosuggest-accept
+
 # Syntax highlighting should be loaded after other Zsh plugins
 source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
