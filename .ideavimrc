@@ -35,3 +35,6 @@ nmap <leader>ca <Action>(ShowIntentionActions)
 " Navigate through code errors/warnings (equivalent to F2 / Shift+F2)
 nmap ]g <Action>(GotoNextError)
 nmap [g <Action>(GotoPreviousError)
+
+" Map <leader>ff to Search Everywhere
+nmap <leader>ff <Action>(SearchEverywhere)
