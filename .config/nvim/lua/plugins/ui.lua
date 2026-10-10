@@ -10,7 +10,6 @@ return {
         transparent_background = true,
         custom_highlights = function(colors)
           return {
-            -- Python's `graph.add_nodes_from()` is captured as a method call.
             -- Keep functions distinct without changing the rest of Mocha's palette.
             ["@function.call"] = { fg = colors.blue },
             ["@function.method.call"] = { fg = colors.teal, style = { "bold" } },
