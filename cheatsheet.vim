@@ -8,6 +8,7 @@
 "   _             : First non-blank character of line
 "   $             : End of line
 "   gg / G        : Top of file / Bottom of file
+"   %             : Jump to matching bracket / parenthesis / brace
 "   Ctrl + d / u  : Scroll half page down / up
 "
 " --- HORIZONTAL LINE MOTIONS (Character Searching) ---
@@ -61,8 +62,15 @@
 "   Cmd + D       : Split Ghostty terminal pane
 "   Cmd + [ / ]   : Switch between Ghostty splits (Neovim / Terminal)
 "
+"   " --- FILE TREE (Neo-tree) ---
+"   <Space> + e   : Toggle File Tree Explorer
+"   Shift + h     : Toggle hidden files/folders (.git, .gitignore, dotfiles)
+"   A             : Add new file / folder (append `/` for folder)
+"   d             : Delete file / folder
+"   r             : Rename file / folder
+"   y             : Copy relative path of file
+"
 " --- NEOVIM SETUP & IDE ACTIONS ---
-"   <Space> + e   : File Tree toggle (Neo-tree)
 "   <Space> + r   : Format code (Conform: Ruff, else Black, else LSP)
 "   <Space> + ca  : Code Actions / Quick Fix (LSP)
 "   K             : Show hover documentation / type info (LSP)
