@@ -21,3 +21,8 @@ Icon?
 
 # Brewfile lock
 Brewfile.lock.json
+
+# Logs
+*.log
+vim.log
+nvim.log
