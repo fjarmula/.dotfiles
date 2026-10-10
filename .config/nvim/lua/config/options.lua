@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
+-- Default configurations
 opt.number = true
 opt.relativenumber = true
 opt.tabstop = 4
@@ -14,6 +15,15 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.signcolumn = "yes"
 opt.clipboard = "unnamedplus"
+
+-- Custom indentation for specific file types
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "lua", "json", "yaml", "yml", "html", "css", "markdown" },
+    callback = function()
+      vim.bo.shiftwidth = 2
+      vim.bo.tabstop = 2
+    end,
+})
 
 -- Quick escape from Insert mode
 vim.keymap.set("i", "jk", "<Esc>", {
