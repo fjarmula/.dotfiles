@@ -52,12 +52,21 @@ return {
     end,
   },
 
-  -- Telescope
+-- Telescope
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
+      local telescope = require("telescope")
       local builtin = require("telescope.builtin")
+
+      telescope.setup({
+        pickers = {
+          find_files = {
+            hidden = true, 
+          },
+        },
+      })
 
       vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Find Files" })
       vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
