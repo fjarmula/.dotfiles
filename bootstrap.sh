@@ -47,16 +47,17 @@ brew install --cask \
 
 # 4. Link configuration files
 echo "Creating symlinks..."
-mkdir -p ~/.config/ghostty
 
-# Usuń domyślne pliki/stare linki, aby uniknąć błędów nadpisywania
-rm -f ~/.zshrc ~/.config/starship.toml ~/.config/ghostty/config ~/.ideavimrc
-rm -rf ~/.config/nvim
+# Delete default files/old links to avoid overwriting errors
+rm -f ~/.zshrc ~/.config/starship.toml ~/.ideavimrc
+rm -rf ~/.config/nvim ~/.config/bat ~/.config/ghostty
 
+# Create symlinks for configuration files
 ln -sfn "$DOTFILES_DIR/.zshrc" ~/.zshrc
 ln -sfn "$DOTFILES_DIR/.config/starship.toml" ~/.config/starship.toml
-ln -sfn "$DOTFILES_DIR/.config/ghostty/config" ~/.config/ghostty/config
 ln -sfn "$DOTFILES_DIR/.ideavimrc" ~/.ideavimrc
 ln -sfn "$DOTFILES_DIR/.config/nvim" ~/.config/nvim
+ln -sfn "$DOTFILES_DIR/.config/bat" ~/.config/bat
+ln -sfn "$DOTFILES_DIR/.config/ghostty" ~/.config/ghostty
 
 echo "Setup completed successfully."
