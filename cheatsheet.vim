@@ -56,9 +56,21 @@
 "   <Space> + fg  : Live grep search text in project (Telescope)
 "   <Space> + fb  : Find open buffers (Telescope)
 "
-" --- VIM ARCHITECTURE & TERMINAL INTEGRATION ---
+" --- VIM ARCHITECTURE, WINDOWS & TABS ---
 "   Buffer        : File loaded into memory
 "   Window        : Viewport displaying a buffer
+"
+"   :split / :vsplit  : Split window horizontally / vertically
+"   :new / :vnew      : Open new empty split (horizontal / vertical)
+"   Ctrl + w + s / v  : Split window horizontally / vertically
+"   Ctrl + w + h/j/k/l: Move cursor to left / down / up / right window
+"   Ctrl + w + w      : Cycle to next window
+"   Ctrl + w + c / :q : Close current window
+"   Ctrl + w + o      : Close all other windows (:only)
+"
+"   :tabnew / :tabedit: Open new empty tab / Open file in new tab
+"   gt / gT           : Go to next / previous tab
+"
 "   Cmd + D       : Split Ghostty terminal pane
 "   Cmd + [ / ]   : Switch between Ghostty splits (Neovim / Terminal)
 "
