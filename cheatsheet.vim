@@ -45,7 +45,7 @@
 "   p             : Paste after cursor (uses system clipboard: unnamedplus)
 "   u / Ctrl + r  : Undo / Redo
 "   << / >>       : Un-indent / Indent line
-"   Ctrl + d      : Un-indent in Insert mode
+"   Ctrl + d / t  : Un-indent / Indent in Insert mode
 "
 " --- SEARCHING & FINDING (Telescope) ---
 "   /text         : Search for 'text' in buffer
