@@ -12,22 +12,40 @@ return {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
+      "nvim-telescope/telescope.nvim",
     },
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      -- Neovim's built-in `:lsp` command manages clients (enable, disable,
-      -- restart, and stop) but has no `info` subcommand. Keep `:LspInfo` as
-      -- a convenient status command for the native LSP health check.
+      vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
+        callback = function(event)
+          local opts = { buffer = event.buf }
+          local builtin = require("telescope.builtin")
+
+          opts.desc = "Go to Definition"
+          vim.keymap.set("n", "gd", builtin.lsp_definitions, opts)
+
+          opts.desc = "Go to Declaration"
+          vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+
+          opts.desc = "Go to Implementation"
+          vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+
+          opts.desc = "Find References"
+          vim.keymap.set("n", "gr", builtin.lsp_references, opts)
+
+          opts.desc = "Show Hover Documentation"
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        end,
+      })
+
       if vim.fn.exists(":LspInfo") == 0 then
         vim.api.nvim_create_user_command("LspInfo", function()
           vim.cmd("checkhealth vim.lsp")
         end, { desc = "Show LSP status" })
       end
 
-      -- Neovim 0.11+ configures LSP servers natively. The old
-      -- `require("lspconfig")[server].setup()` and Mason handlers APIs are
-      -- deprecated/removed in the versions pinned by lazy-lock.json.
       vim.lsp.config("pyright", { capabilities = capabilities })
       vim.lsp.config("ruff", { capabilities = capabilities })
 
