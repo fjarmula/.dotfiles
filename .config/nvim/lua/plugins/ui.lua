@@ -75,7 +75,7 @@ return {
     end,
   },
 
-  -- Neo-tree
+-- Neo-tree
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -84,8 +84,21 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-    config = function()
-      require("neo-tree").setup({})
+    opts = {
+      window = {
+        position = "current",
+      },
+      filesystem = {
+        hijack_netrw_behavior = "open_current",
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+      },
+    },
+    config = function(_, opts)
+      require("neo-tree").setup(opts)
 
       vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", {
         desc = "Toggle File Tree",
