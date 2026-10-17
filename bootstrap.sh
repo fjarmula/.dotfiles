@@ -3,7 +3,7 @@
 set -euo pipefail
 
 DOTFILES_DIR="$HOME/.dotfiles"
-REPO_URL="https://github.com/fjarmula/dotfiles.git"
+REPO_URL="https://github.com/fjarmula/.dotfiles.git"
 
 echo "Starting macOS environment setup..."
 
