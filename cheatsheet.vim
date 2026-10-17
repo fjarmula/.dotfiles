@@ -10,6 +10,7 @@
 "   gg / G        : Top of file / Bottom of file
 "   %             : Jump to matching bracket / parenthesis / brace
 "   Ctrl + d / u  : Scroll half page down / up
+"   Ctrl + o / i  : Jump back / forward in jump list (e.g. after gd)
 "
 " --- HORIZONTAL LINE MOTIONS (Character Searching) ---
 "   f{char} / F{char} : Find {char} forward / backward on line
@@ -68,28 +69,33 @@
 "   Ctrl + w + c / :q : Close current window
 "   Ctrl + w + o      : Close all other windows (:only)
 "
-"   :tabnew / :tabedit: Open new empty tab / Open file in new tab
+"   :tabe / :tabnew   : Open new empty tab (:tabe is shorthand)
+"   Ctrl + w + Shift+T: Move current split window into its own new tab
 "   gt / gT           : Go to next / previous tab
+"   :tabclose / :tabc : Close current tab
 "
 "   Cmd + D       : Split Ghostty terminal pane
 "   Cmd + [ / ]   : Switch between Ghostty splits (Neovim / Terminal)
 "
-"   " --- FILE TREE (Neo-tree) ---
-"   <Space> + e   : Toggle File Tree Explorer
-"   Shift + h     : Toggle hidden files/folders (.git, .gitignore, dotfiles)
+" --- FILE TREE (Neo-tree) ---
+"   <Space> + e   : Toggle File Tree Explorer (opens in current full buffer)
+"   Shift + h     : Toggle hidden files/folders (visible by default)
 "   A             : Add new file / folder (append `/` for folder)
 "   d             : Delete file / folder
 "   r             : Rename file / folder
 "   y             : Copy relative path of file
 "
-" --- NEOVIM SETUP & IDE ACTIONS ---
+" --- NEOVIM SETUP & IDE ACTIONS (LSP) ---
+"   gd            : Go to Definition (Telescope)
+"   gD            : Go to Declaration (LSP)
+"   gi            : Go to Implementation (LSP)
+"   gr            : Find References (Telescope)
+"   K             : Show hover documentation / type info (LSP)
 "   <Space> + r   : Format code (Conform: Ruff, else Black, else LSP)
 "   <Space> + ca  : Code Actions / Quick Fix (LSP)
-"   K             : Show hover documentation / type info (LSP)
-"   grn / grr     : Rename symbol / Find references (LSP)
 "   ]g / [g       : Next / Previous diagnostic error/warning
-"   :LspInfo       : Show the native LSP health/status report
-"   :lsp restart   : Restart LSP clients attached to the current buffer
+"   :LspInfo      : Show the native LSP health/status report
+"   :lsp restart  : Restart LSP clients attached to the current buffer
 "   :Mason        : Package manager for LSPs, formatters & linters
 "   :Lazy         : Plugin manager status
 "
