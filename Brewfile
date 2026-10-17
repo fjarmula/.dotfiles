@@ -1,3 +1,4 @@
+tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Automatic configure script builder
@@ -40,6 +41,8 @@ brew "imagemagick"
 brew "libksba"
 # YAML Parser
 brew "libyaml"
+# Mac App Store command-line interface
+brew "mas"
 # Incremental parsing library
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -64,17 +67,50 @@ brew "uv"
 brew "zlib"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Real-time type-ahead completion for Zsh
+brew "zsh-autocomplete"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Application uninstaller
+cask "appcleaner"
+# Not so boring notch That Rocks
+cask "theboredteam/boring-notch/boring-notch", trusted: true
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
+cask "google-chrome"
 # Menu bar manager
 cask "jordanbaird-ice"
+# Blocks all Keyboard and TouchBar input
+cask "keyboardcleantool"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# IDE for professional Python development
+cask "pycharm"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Music streaming service
+cask "spotify"
+# System monitor for the menu bar
+cask "stats"
 # Open-source code editor
 cask "visual-studio-code"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
+mas "uBlock Origin Lite", id: 6745342698
+mas "Xcode", id: 497799835
 vscode "adpyke.codesnap"
 vscode "demiaochen.clang-format-indent-4"
 vscode "docker.docker"
@@ -114,4 +150,5 @@ vscode "shopify.ruby-lsp"
 vscode "tomoki1207.pdf"
 vscode "webfreak.debug"
 vscode "wholroyd.jinja"
+uv "graphifyy[mcp]"
 npm "corepack"
