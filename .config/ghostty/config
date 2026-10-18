@@ -14,10 +14,10 @@ window-height = 32
 
 window-save-state = "never"
 
-window-position-x = 200
-window-position-y = 150
+# window-position-x = 200
+# window-position-y = 150
 # Prevent shell/programs from changing window title/cursor
-
+maximize = true
 shell-integration-features = no-title,no-cursor
 
 # =========================
