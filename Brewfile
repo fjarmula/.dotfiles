@@ -1,3 +1,4 @@
+tap "nikitabobko/tap"
 tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
@@ -73,6 +74,8 @@ brew "zsh-autocomplete"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace", trusted: true
 # Application uninstaller
 cask "appcleaner"
 # Not so boring notch That Rocks
