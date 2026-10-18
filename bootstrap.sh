@@ -23,8 +23,8 @@ else
     git -C "$DOTFILES_DIR" pull --rebase origin main
 fi
 
-# 3. Install packages and app
-echo "Installing packages and Ghostty..."
+# 3. Install packages and apps
+echo "Installing packages and apps..."
 brew install \
     asdf \
     starship \
@@ -43,14 +43,15 @@ brew install \
 
 brew install --cask \
     ghostty \
-    font-jetbrains-mono-nerd-font
+    font-jetbrains-mono-nerd-font \
+    nikitabobko/tap/aerospace
 
 # 4. Link configuration files
 echo "Creating symlinks..."
 
 # Delete default files/old links to avoid overwriting errors
 rm -f ~/.zshrc ~/.config/starship.toml ~/.ideavimrc
-rm -rf ~/.config/nvim ~/.config/bat ~/.config/ghostty
+rm -rf ~/.config/nvim ~/.config/bat ~/.config/ghostty ~/.config/aerospace
 
 # Create symlinks for configuration files
 ln -sfn "$DOTFILES_DIR/.zshrc" ~/.zshrc
@@ -59,5 +60,6 @@ ln -sfn "$DOTFILES_DIR/.ideavimrc" ~/.ideavimrc
 ln -sfn "$DOTFILES_DIR/.config/nvim" ~/.config/nvim
 ln -sfn "$DOTFILES_DIR/.config/bat" ~/.config/bat
 ln -sfn "$DOTFILES_DIR/.config/ghostty" ~/.config/ghostty
+ln -sfn "$DOTFILES_DIR/.config/aerospace" ~/.config/aerospace
 
 echo "Setup completed successfully."
