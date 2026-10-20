@@ -57,10 +57,18 @@ style = "bg:yellow fg:0 bold"
 format = "[ $symbol$branch]($style)"
 
 [git_status]
-stashed = ""
-untracked = ""
 style = "bg:yellow fg:0 bold"
 format = "[$all_status$ahead_behind ]($style)"
+untracked = "? "
+modified = "! "
+staged = "+ "
+renamed = "\u00BB "
+deleted = "\u2718 "
+stashed = "$ "
+conflicted = "= "
+ahead = "\u21E1 "
+behind = "\u21E3 "
+diverged = "\u21D5 "
 
 # =========================
 # Python
