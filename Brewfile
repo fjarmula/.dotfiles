@@ -91,16 +91,12 @@ cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # IDE for professional Python development
 cask "pycharm"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
 # Music streaming service
 cask "spotify"
 # System monitor for the menu bar
