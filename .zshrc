@@ -50,6 +50,21 @@ source <(fzf --zsh)
 
 
 # =========================
+# Zsh Vi Mode (Vim Motions)
+# =========================
+
+# Enable Vi mode in Zsh
+bindkey -v
+
+# Fix Backspace behavior in insert mode (allows deleting characters typed before entering Insert mode)
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins '^H' backward-delete-char
+
+# Reduce Esc key timeout to minimum (0.01s)
+export KEYTIMEOUT=1
+
+
+# =========================
 # Zsh Plugins (Optimized)
 # =========================
 
