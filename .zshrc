@@ -40,6 +40,10 @@ eval "$(starship init zsh)"
 # Zoxide (smart cd replacement)
 eval "$(zoxide init zsh)"
 
+# Initialize command completion before fzf
+autoload -Uz compinit
+compinit
+
 # fzf configuration
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview 'bat --style=numbers --color=always --line-range :50 {} 2>/dev/null || cat {}'"
 source <(fzf --zsh)
