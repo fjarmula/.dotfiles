@@ -49,6 +49,12 @@ brew install --cask \
 # 4. Link configuration files
 echo "Creating symlinks..."
 
+# Ensure ~/.config directory exists
+mkdir -p ~/.config
+
+# Silence "Last login" message in terminal
+touch ~/.hushlogin
+
 # Delete default files/old links to avoid overwriting errors
 rm -f ~/.zshrc ~/.config/starship.toml ~/.ideavimrc
 rm -rf ~/.config/nvim ~/.config/bat ~/.config/ghostty ~/.config/aerospace
