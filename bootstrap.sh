@@ -26,6 +26,7 @@ fi
 # 3. Install packages and apps
 echo "Installing packages and apps..."
 brew install \
+    git \
     asdf \
     starship \
     zsh-autosuggestions \
