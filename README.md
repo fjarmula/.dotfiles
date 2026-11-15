@@ -38,7 +38,7 @@ A complete reference for Neovim keymaps, LSP bindings, and terminal integration 
 
 ## Window management
 
-AeroSpace manages virtual workspaces and focus. Every newly detected window
+AeroSpace manages only virtual workspaces. Every newly detected window
 floats; Raycast handles all window positioning and sizing. Bootstrap preserves
 the existing AeroSpace symlink at `~/.config/aerospace`.
 
@@ -46,7 +46,6 @@ the existing AeroSpace symlink at `~/.config/aerospace`.
 | --- | --- | --- |
 | Option + 1–7 | Switch workspace | AeroSpace |
 | Option + Shift + 1–7 | Move window to workspace | AeroSpace |
-| Control + Option + H/J/K/L | Focus left/down/up/right | AeroSpace |
 | Option + Tab | Previous workspace | AeroSpace |
 | Option + Shift + Tab | Move workspace to next monitor | AeroSpace |
 | Option + Cmd + H | Left Half | Raycast |
@@ -59,7 +58,13 @@ the existing AeroSpace symlink at `~/.config/aerospace`.
 Maximize fills the available screen inside the current workspace; it does not
 create a native macOS fullscreen Space. Almost Maximize uses Raycast's centered
 90% preset. AeroSpace has no tiling, resize, join, or fullscreen bindings.
-Existing workspace-to-monitor assignments are retained.
+Existing workspace-to-monitor assignments are retained. AeroSpace has no window
+focus shortcuts, service mode, or mouse-warp callback. It still tracks windows
+and hides/shows them to implement virtual workspaces; floating mode keeps it
+from tiling them.
+
+Raycast's old Control + Option corner shortcuts are cleared. Use Option + Cmd +
+H/J/K/L for halves; those keys do not move windows into corners.
 
 ### Restore Raycast on a fresh Mac
 
