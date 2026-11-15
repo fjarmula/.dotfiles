@@ -97,6 +97,8 @@ cask "keyboardcleantool"
 cask "microsoft-teams"
 # IDE for professional Python development
 cask "pycharm"
+# Launcher and window positioning/sizing
+cask "raycast"
 # Music streaming service
 cask "spotify"
 # System monitor for the menu bar

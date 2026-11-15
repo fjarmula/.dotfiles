@@ -44,8 +44,14 @@ brew install \
 
 brew install --cask \
     ghostty \
+    raycast \
     font-jetbrains-mono-nerd-font \
     nikitabobko/tap/aerospace
+
+# Free Cmd + Space for Raycast, preserving all other system shortcuts.
+echo "Disabling the default Spotlight shortcut..."
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 \
+    '<dict><key>enabled</key><false/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1048576</integer></array><key>type</key><string>standard</string></dict></dict>'
 
 # 4. Link configuration files
 echo "Creating symlinks..."
