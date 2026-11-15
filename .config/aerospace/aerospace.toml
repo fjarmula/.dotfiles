@@ -1,5 +1,5 @@
-# Place a copy of this config to ~/.aerospace.toml
-# After that, you can edit ~/.aerospace.toml to your liking
+# Linked by bootstrap.sh to ~/.config/aerospace.
+# AeroSpace owns workspaces and focus; Raycast owns window geometry.
 
 # Config version for compatibility and deprecations
 # See: https://nikitabobko.github.io/AeroSpace/guide#config-version
@@ -20,19 +20,6 @@ auto-reload-config = true
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
-
-# See: https://nikitabobko.github.io/AeroSpace/guide#layouts
-# The 'accordion-padding' specifies the size of accordion padding
-# You can set 0 to disable the padding feature
-accordion-padding = 30
-
-# Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
-
-# Possible values: horizontal|vertical|auto
-# 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
-#               tall monitor (anything higher than wide) gets vertical orientation
-default-root-container-orientation = 'auto'
 
 # Mouse follows focus when focused monitor changes
 # Drop it from your config, if you don't like this behavior
@@ -78,6 +65,11 @@ gaps.outer.bottom =     0
 gaps.outer.top =        0
 gaps.outer.right =      0
 
+# Keep every newly detected window floating so Raycast can move and resize it.
+[[on-window-detected]]
+    if = 'true'
+    run = ['layout floating']
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
@@ -107,25 +99,11 @@ gaps.outer.right =      0
     # alt-enter = '''exec-and-forget osascript -e \
     # 'tell application "Terminal" to tell (do script) to activate' '''
 
-    # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-    alt-slash = 'layout tiles horizontal vertical'
-    alt-comma = 'layout accordion horizontal vertical'
-
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     ctrl-alt-h = 'focus left'
     ctrl-alt-j = 'focus down'
     ctrl-alt-k = 'focus up'
     ctrl-alt-l = 'focus right'
-
-    # See: https://nikitabobko.github.io/AeroSpace/commands#move
-    ctrl-alt-shift-h = 'move left'
-    ctrl-alt-shift-j = 'move down'
-    ctrl-alt-shift-k = 'move up'
-    ctrl-alt-shift-l = 'move right'
-
-    # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-    alt-minus = 'resize smart -50'
-    alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
@@ -135,8 +113,6 @@ gaps.outer.right =      0
     alt-5 = 'workspace 5'
     alt-6 = 'workspace 6'
     alt-7 = 'workspace 7'
-
-    alt-f = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -159,18 +135,6 @@ gaps.outer.right =      0
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
-    r = ['flatten-workspace-tree', 'mode main'] # reset layout
-    f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
-    backspace = ['close-all-windows-but-current', 'mode main']
-
-    # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-    #s = ['layout sticky tiling', 'mode main']
-
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
-
 # Assign workspaces to monitors
 # See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [workspace-to-monitor-force-assignment]
