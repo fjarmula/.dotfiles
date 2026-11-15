@@ -75,4 +75,9 @@ ln -sfn "$DOTFILES_DIR/.config/bat" ~/.config/bat
 ln -sfn "$DOTFILES_DIR/.config/ghostty" ~/.config/ghostty
 ln -sfn "$DOTFILES_DIR/.config/aerospace" ~/.config/aerospace
 
+# 5. Restore Raycast hotkeys (encrypted import requires the export passphrase)
+bash "$DOTFILES_DIR/raycast/restore.sh"
+
+echo "Grant Raycast Accessibility access and finish the settings import in Raycast."
+echo "Log out and back in if macOS still intercepts Cmd + Space for Spotlight."
 echo "Setup completed successfully."
