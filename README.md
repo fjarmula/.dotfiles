@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal environment configurations for macOS, managed via Zsh, Starship, Ghostty, Neovim, and IdeaVim.
+Personal environment configurations for macOS, managed via Zsh, Starship, Ghostty, Raycast, Neovim, and IdeaVim.
 
 ## Quick Installation
 
